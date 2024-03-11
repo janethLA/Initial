@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body>
+    <h1 id="titulo">Titulo con Javascript</h1>
+    <br/>
+    Nombre: <input  type="text"  onchange="convertir(this)">
+    <script>
+       function convertir(nombreInput){
+        nombreInput.value = nombreInput.value.toUpperCase();
+       }
+    </script>
+</body>
+</html>

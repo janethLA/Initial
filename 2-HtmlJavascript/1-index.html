@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+</head>
+<body>
+    
+    <h1 id="cabecera">Ejemplo DOM con Javascript</h1>
+    <p id="parrafo1">Esto es el parrafo 1</p>
+    <p id="parrafo2">Esto es el parrafo 2</p>
+    <script>
+        //GETELEMENTBYID-----------------------------------
+        //document--> es un objeto es el mayor 
+        //Ponemos inneHTML porque sino solo accedemos al objeto h1 y no lo que esta dentro de eso
+        let cabecera= document.getElementById("cabecera").innerHTML;
+        //console.log("Cabecera: "+cabecera);
+        console.log(`Cabecera2: ${cabecera}`);
+        let parrafo = document.getElementById("parrafo1");
+        console.log("Parrafo: "+parrafo.innerHTML)
+        console.log('Desde javascript');
+       
+        //Cambiar el valor
+        parrafo.innerHTML = 'Nuevo valor del parrafo';
+        console.log("Parrafo: "+parrafo.innerHTML)
+        //GETELEMENTBYTAGNAME-----------------------------------
+       /* let parrafos = document.getElementsByTagName('p');
+        console.log('Tamanio de la etiqueta p: '+parrafos.length);
+        for(let i =0 ;i<parrafos.length;i++){
+            console.log(`${i+1} : ${parrafos[i].innerHTML}`);
+        }*/
+
+
+    </script>
+</body>
+</html>

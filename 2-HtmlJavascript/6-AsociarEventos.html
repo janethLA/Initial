@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body>
+    <h1 id="titulo">Titulo con Javascript</h1>
+    <br/>
+    <div id="mostrar"></div>
+    <script>
+        //                                 asignamos la funcion sin parentesis
+        document.getElementById('titulo').onclick = cambiarTexto;
+        function cambiarTexto(titulo){
+            document.getElementById('mostrar').innerHTML = 'Nuevo contenido';
+       }
+    </script>
+</body>
+</html>

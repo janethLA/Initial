@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body onload="entrar()">
+    <h1 id="titulo">Titulo con Javascript</h1>
+    <br/>
+    <div id="mostrar"></div>
+    <script>
+       function entrar(){
+        //Al cargar la pagina web (Evento onload) mostramos un alert 
+        alert('Entrando a la pagina web');
+        let texto='';
+        if(navigator.cookieEnabled){
+            texto = 'Cookies habilitado';
+        }else{
+            texto = 'Cookies no habilitado';
+        }
+        document.getElementById('mostrar').innerHTML = texto;
+        console.log(texto);
+       }
+    </script>
+</body>
+</html>

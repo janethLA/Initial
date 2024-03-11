@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body>
+    <h1 id="titulo" >Titulo con Javascript</h1>
+    <br/>
+    <form id="forma">
+        Nombre: <input id="nombre">
+        <br/><br/>
+        Apellido: <input id="apellido">
+    </form>
+   
+   <script>
+    //Solo utilizamos una vez para todos los elementos del formulario
+       const forma= document.getElementById('forma');
+
+      forma.addEventListener('focus', (evento)=>{
+        evento.target.style.background = 'yellow';
+       }, true);//true indica que se aplique a los elementos del formulario y solo en el formulario
+      forma.addEventListener('blur',  (evento)=>{
+        evento.target.style.background = 'white';
+       }, true);
+      
+      
+    </script>
+</body>
+</html>

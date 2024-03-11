@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="titulo">Cambio de Atributo de las etiquetas</h1>
+    <button onclick="mostrar()">Mostrar Imagen</button>
+    <br/>
+    <br/>
+    <button onclick="cambiarColor()">Cambiar color</button>
+    <br/>
+    <br/>
+    <img id="imagen" src="https://i.blogs.es/544e7d/650_1000_javascript_logo/1366_2000.png">
+    <script>
+        function mostrar(){
+            document.getElementById('imagen').src = "https://cdn-icons-png.flaticon.com/512/174/174854.png";
+        }
+        function cambiarColor() {
+            //Podemos cambiar los estiloss
+            document.getElementById('titulo').style.color = 'red';
+        }
+       
+    </script>
+</body>
+</html>

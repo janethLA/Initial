@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    <style>
+        /*Esto es una clase en css */
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="cabecera" class="azul">Ejemplo DOM con Javascript</h1>
+    <p id="parrafo1" class="azul">Esto es el parrafo 1</p>
+    <p id="parrafo2" class="azul">Esto es el parrafo 2</p>
+    <script>
+       
+        //GETELEMENTBYCLASSNAME-----------------------------------
+        let elementos = document.getElementsByClassName('azul');
+        console.log('Tamanio de los elementos '+elementos.length);
+        for(let i =0 ;i<elementos.length;i++){
+            console.log(`${i+1} : ${elementos[i].innerHTML}`);
+        }
+
+        //QUERYSELECTORALL--> solo te muestra los que tienen la etiqueta p y pertenecen a la clase azul
+        let elemento = document.querySelectorAll('p.azul');
+        console.log('--------------queryselectorall------------')
+        console.log('Tamanio de los elementos '+elemento.length);
+        for(let i =0 ;i<elemento.length;i++){
+            console.log(`${i+1} : ${elemento[i].innerHTML}`);
+        }
+
+
+    </script>
+</body>
+</html>

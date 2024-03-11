@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form  action="aquiVaUrlDelServidor" autocomplete="off" target="_blank">
+
+        <!--Enviar en el formulario este campo al servidor pero no se puede modificar-->
+        <label for="idPersona">id</label> <br/>
+        <input type="number" name="idPersona" id="idPersona" value="100"  readonly="true"/> <br/>
+
+       <!--Se envia esta informacion al servidor pero no se muestra en el formulario-->
+        <input type="hidden" name="sistema" id="sistema" value="SAP"  /> <br/>
+
+        <label for="nombre">Nombre</label> <br/>
+        <input type="text" name="nombre" id="nombre" value="Juan" required="true" /> <br/>
+    
+        <label for="apellido">Apellido</label> <br/>
+        <input type="text" name="apellido" id="apellido" value="Perez" required="true" /> <br/>
+        
+        <label for="password">Password</label> <br/>
+        <input type="password" name="password" id="password"  required="true" /> <br/>
+        
+        <label for="email">Email</label> <br/>
+        <input type="email" name="email" id="email"  required="true" /> <br/>
+        
+        <label for="edad">Edad</label> <br/>
+        <input type="number" name="edad" id="edad"  required="true" step="any"/> <br/>
+        
+        <!-- Para RadioButton-->
+        <label>Genero</label> <br/>
+        <input type="radio" name="genero" id="femenino" /> 
+        <label for="femenino">Femenino</label> <br/>
+        <input type="radio" name="genero" id="masculino" />
+        <label for="masculino">Masculino</label> <br/>
+
+        <!-- Para CheckBox-->
+        <label>Tipo de Musica</label> <br/>
+        <input type="checkbox" name="musica" id="rock" />
+        <label for="rock">Rock</label> <br/>
+        <input type="checkbox" name="musica" id="bachata" /> 
+        <label for="bachata">Bachata</label> <br/>
+
+        <!-- Para Select-->
+        <label>Tipos de Autos</label> <br/>
+        <select id="autos" name="autos"><!--Si queremos selcccionar multiples respuestas-> multiple="true"-->
+            <option value="volvo">Volvo</option> <!--lo que se envia al servidor es el valor de value-->
+            <option value="bmw">BMW</option>
+            <option value="audi" selected="true">AUDI</option>
+        </select>
+       
+        <!--Para Text Area-->
+        <label>Tipo de Musica</label> <br/>
+        <textarea name="comentario" id="comentario" cols="30" rows="4">
+         Este es mi comentario
+        </textarea>
+        <input type="submit" value="Enviar"/>
+   </form>
+</body>
+</html>

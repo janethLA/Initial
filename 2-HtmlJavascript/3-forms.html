@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    <style>
+        /*Esto es una clase en css */
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Juan">
+        <br/>
+        Apellido: <input type="text" name="apellido" value="Perez">
+        <br/>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id='valores'></div>
+    <script>
+        function mostrarValores(){
+            let elementos = document.getElementById('formulario');
+            let text='';
+            for(let elemento of elementos){
+               text+=elemento.value + '<br/>';//En la consola se muestra la etiqueta como tal pero si lo mostramos en el navegador se muestra con un salto de linea
+            }
+            document.getElementById('valores').innerHTML = text;
+            console.log(text);
+
+
+           /* //Tambien podemos accerder a cada elemento
+            let nombre = elementos['nombre'];
+            let apellido = elementos['apellido'];
+            text=nombre.value+'<br/>'+apellido.value;
+            document.getElementById('valores').innerHTML = text;
+            console.log(nombre);//Te imprime todo el objeto , para acceder el valor se pone un value*/
+        }
+       
+    </script>
+</body>
+</html>

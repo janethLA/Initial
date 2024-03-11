@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body>
+    <h1 id="titulo" >Titulo con Javascript</h1>
+    <br/>
+    Nombre: <input onfocus="cambiarAmarillo(this)" onblur="cambiarBlanco(this)">
+    <br/><br/>
+    Apellido: <input onfocus="cambiarAmarillo(this)" onblur="cambiarBlanco(this)">
+   <script>
+        //Eventos Onfocus, Onblur
+       function cambiarAmarillo(elemento){
+        elemento.style.background = 'yellow';
+       }
+       function cambiarBlanco(elemento){
+        elemento.style.background = 'white';
+       }
+    </script>
+</body>
+</html>

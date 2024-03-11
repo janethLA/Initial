@@ -1,0 +1,178 @@
+h1{
+    color:blue;
+}
+
+p{
+    color:aliceblue;
+    background-color: black;
+    padding: 10px ;
+    border: 15px solid blueviolet;
+    margin: 10px  ;
+    /*margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-right: 25px;
+    
+    Otra forma es poner;
+    margin:20px 10px 25px 15px;
+
+    */
+    text-align: center;
+}
+
+/*
+-->Para aplicar css para el atributo class
+
+.tarjeta{
+    color:blue;
+    margin:50px;
+}
+
+*{
+
+}
+-->Se aplica para todas las etiquetas
+*{
+   margin:0px;
+   padding:0px;
+}
+
+    
+==========================================================
+Selector: puede ser el nombre, id, clase o el atributo de la etiqueta
+SINTAXIS:
+
+selector {
+    propiedad:valor de la propiedad;
+}
+
+----------------------------------
+ejemplo con nombre de la etiqueta
+----------------------------------
+body {
+    background: red;
+}
+
+
+----------------------------------
+ejemplo con id de la etiqueta
+----------------------------------
+#caja {
+    width:200px;
+    height:200px;
+    background: red;
+}
+
+html:
+<div id="caja"></div>
+
+----------------------------------
+ejemplo con clase de la etiqueta (se utiliza una clase para varias etiquetas)
+----------------------------------
+.grupo {
+    width:200px;
+    height:200px;
+    background: red;
+    margin: 10px;
+}
+
+html:
+<div class="grupo"></div>
+<div class="grupo"></div>
+<div class="grupo"></div>
+
+
+padding: borde interno de una caja
+
+
+----------------------------------
+PROPIEDADES
+----------------------------------
+POSICIONES DE LAS CAJAS
+----------------------------------
+body {
+    position: relative;
+}
+
+#cajaDentroBody {
+    position: absolute; //este tipo se utiliza cuando esta caja esta dentro de otro
+}
+
+#cajaFija {
+    position: fixed; //este tipo se utiliza cuando se quiere un lugar fijo
+    z-index: 1;  //poner encima de las cajas  
+}
+
+
+-----------------
+float: left   // pone la lista en horizontal
+
+
+-----------------------------
+Selection por ruta
+-----------------------------
+css:
+
+#top ul li {
+    float:left;
+}
+
+
+html: 
+<div id="top">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+----------------------------------
+selection etiqueta-id
+----------------------------------
+css:
+
+aside#izq{
+    float:left;
+}
+
+
+html: 
+<aside id="izq"> </aside>
+
+----------------------------------
+selection etiqueta-clase
+----------------------------------
+css:
+
+a .botones:hover{ //hover es una seudoclase cuando pasas el mouse por el boton
+    background:red;
+}
+
+a .botones:active{ //active cuando haces click al boton
+    background:red;
+}
+
+html: 
+<a> <li class="botones"></li> </a>
+
+
+--------------------------------------------------
+para aplicar css a todo lo que empiece con "col-"
+-------------------------------------------------
+
+css:
+
+[class *= "col-"]{ 
+    float: left;
+    padding: 20px;
+
+}
+
+html: 
+<div class="col-12"> </div>
+<div class="col-6"> </div>
+<div class="col-4"> </div>
+
+
+/*

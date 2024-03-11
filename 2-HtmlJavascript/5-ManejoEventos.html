@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body>
+    <!-- despues de la funcion de javascript ponemos ; y podemos poner otra funcion
+         this : es el objeto h1-->
+    <h1 onclick='cambiarTexto(this)'>Titulo con Javascript</h1>
+    <script>
+        function cambiarTexto(titulo){
+            console.log(titulo);
+            titulo.innerHTML = "Cambiamos de titulo";
+            console.log(titulo.innerHTML);
+       }
+    </script>
+</body>
+</html>

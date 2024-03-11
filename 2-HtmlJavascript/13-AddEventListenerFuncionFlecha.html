@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM con Javascript</title>
+    
+</head>
+<body>
+    <h1 id="titulo" >Titulo con Javascript</h1>
+    <br/>
+    Nombre: <input id="nombre">
+    <br/><br/>
+    Apellido: <input id="apellido">
+   <script>
+       document.getElementById('nombre').addEventListener('focus', (evento)=>{
+        evento.target.style.background = 'yellow';
+       });
+       document.getElementById('nombre').addEventListener('blur',  (evento)=>{
+        evento.target.style.background = 'white';
+       });
+       document.getElementById('apellido').addEventListener('focus', cambiarAmarillo);
+       document.getElementById('apellido').addEventListener('blur', cambiarBlanco);
+       
+       function cambiarAmarillo(evento){
+        let componente = evento.target;
+        componente.style.background = 'yellow';
+       }
+       function cambiarBlanco(evento){
+        let componente = evento.target;
+        componente.style.background = 'white';
+       }
+    </script>
+</body>
+</html>
